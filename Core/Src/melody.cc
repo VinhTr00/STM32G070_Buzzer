@@ -62,6 +62,7 @@ void Melody::soundBuzzer1(void)
 		}
 		else
 		{
+			/**  F(PWM) = F(Timer_Clock) / ((Prescaler + 1) * (Counter_Period + 1)) **/
 			__HAL_TIM_SET_PRESCALER(timHandle_melody,FREQ_TIMER/(bootup1[thisNote]*counter_peroid)-1);
 			__HAL_TIM_SetCompare(timHandle_melody,channel,400);
 			HAL_GPIO_TogglePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin);
@@ -89,6 +90,7 @@ void Melody::soundBuzzer2(void)
 		}
 		else
 		{
+			/**  F(PWM) = F(Timer_Clock) / ((Prescaler + 1) * (Counter_Period + 1)) **/
 			__HAL_TIM_SET_PRESCALER(timHandle_melody,FREQ_TIMER/(bootup2[thisNote]*counter_peroid)-1);
 			__HAL_TIM_SetCompare(timHandle_melody,channel,400);
 			HAL_GPIO_TogglePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin);
@@ -116,6 +118,7 @@ void Melody::soundBuzzer3(void)
 		}
 		else
 		{
+			/**  F(PWM) = F(Timer_Clock) / ((Prescaler + 1) * (Counter_Period + 1)) **/
 			__HAL_TIM_SET_PRESCALER(timHandle_melody,FREQ_TIMER/(bootup3[thisNote]*counter_peroid)-1);
 			__HAL_TIM_SetCompare(timHandle_melody,channel,400);
 			HAL_GPIO_TogglePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin);
