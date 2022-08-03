@@ -115,6 +115,7 @@ class Melody{
 			this->timHandle_delay = timHandle_delay;
 			this->timHandle_melody = timHandle_melody;
 		}
+		~Melody(){};
 		void delay_ms(uint16_t ms);
 		void soundBuzzer1(void);
 		void soundBuzzer2(void);
